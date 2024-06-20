@@ -147,6 +147,8 @@ class TokenManager:
 
     def get_preauth_cookie(self):
         # fakeopen已挂
+        # 0E92DAF9-94F0-4F77-BDF4-53A60D19EC65
+        # 
         return requests.get('https://publicapi.closeai.biz/auth/preauth').json().get('preauth_cookie')
         if self.device_token:
             rsp = requests.post(
