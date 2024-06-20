@@ -147,7 +147,7 @@ class TokenManager:
 
     def get_preauth_cookie(self):
         # fakeopen已挂
-        # return requests.get('https://ai.fakeopen.com/auth/preauth').json().get('preauth_cookie')
+        return requests.get('https://publicapi.closeai.biz/auth/preauth').json().get('preauth_cookie')
         if self.device_token:
             rsp = requests.post(
                 'https://ios.chat.openai.com/backend-api/preauth_devicecheck',
